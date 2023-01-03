@@ -198,6 +198,7 @@ void ThreadExit(void) {
 		SemaphoreSignal(threads);
 	}
 	EA = 0;
+	currentThread = 0;
 	do {
 		currentThread = (currentThread+1) % MAXTHREADS;
 		if (currentThread == 0 && bitmap) timer++;
